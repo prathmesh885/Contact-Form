@@ -1,0 +1,48 @@
+<div class="container mt-5" *ngIf="up">
+  <div class="row">
+    <h2 class="text-center">Account Login</h2>
+    <div class="col-6 m-auto">
+      <div class="card m-auto">
+        <div class="card-header">
+          Enter Details
+        </div>
+        <div class="card-body">
+          <!-- <form> -->
+          <div class="form-group col-12">
+            <label>Email</label>
+            <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" required>
+          </div>
+          <div class="form-group col-12">
+            <label>Password</label>
+            <input [(ngModel)]="pass" [ngModelOptions]="{standalone: true}" class="form-control" required>
+          </div>
+          <br>
+          <div class="form-group col-12">
+            <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+            <button type="submit" class="btn btn-secondary m-2" routerLink="../signup">Sign Up</button>
+          </div>
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container" *ngIf="down">
+  <div style="background-color: lightblue;">
+    <h2 class="text-center">Welcome to your Contact Form</h2>
+    <h1 class="text-center">{{obj2.email}}</h1>
+    <p style="text-align: right;">
+
+      <button type="submit" class="btn btn-danger m-2" (click)="logout()">Logout</button>
+      <button type="submit" class="btn btn-secondary m-2" routerLink="../product">Contact Form</button>
+    </p>
+  </div>
+</div>
